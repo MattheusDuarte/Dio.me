@@ -9,7 +9,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - /Documentos/DIO.me/Dio.me/Formacao/Docker_Fundamentals/docker_compose/data:/var/lib/mysql
+      - /data:/var/lib/mysql
     networks:
       - minha-rede
 
