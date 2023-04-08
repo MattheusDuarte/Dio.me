@@ -9,5 +9,11 @@
 ## Como executar
 Para fazer a execução do  programa rodar o comando:
 ```bash
+#cria o cluster
 vagrant up
+
+#mostra os nós
+docker node ls
 ```
+
+``
