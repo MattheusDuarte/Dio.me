@@ -15,5 +15,3 @@ vagrant up
 #mostra os nós
 docker node ls
 ```
-
-``
