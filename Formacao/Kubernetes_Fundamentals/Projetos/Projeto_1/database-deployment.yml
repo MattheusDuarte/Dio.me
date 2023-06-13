@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-dados
+spec:
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+      - name: mysql
+        image: mattheuduartess/projeto1-database:1.0
+        args:
+          - "--ignore-db-dir=lost+found"
+        imagePullPolicy: Always #Atualiza imagem que esta no cluster 
+
+        ports:
+        - containerPort: 3306
+          name: mysql
+        
+        volumeMounts:
+        - name: mysql-dados
+          mountPath: /var/lib/mysql  #referência no contêiner
+      
+      volumes:
+      - name: mysql-dados
+        persistentVolumeClaim:
+          claimName: mysql-dados
