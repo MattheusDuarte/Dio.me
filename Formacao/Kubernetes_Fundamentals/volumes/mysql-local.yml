@@ -15,11 +15,19 @@ spec:
       - name: mysql
         image: mysql:5.6
         env:
-          # Use secret in real usage
+          # Use secret 
         - name: MYSQL_ROOT_PASSWORD
-          value: Senha123
+          valueFrom: 
+            secretKeyRef:
+              name: my-secret
+              key: MYSQL_ROOT_PASSWORD
+
         - name: MYSQL_DATABASE
-          value: meubanco
+          valueFrom:
+            secretKeyRef:
+              name: my-secret
+              key: MYSQL_DATABASE
+              
         ports:
         - containerPort: 3306
           name: mysql
