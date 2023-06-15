@@ -27,7 +27,7 @@ jobs:
         # Push is a shorthand for --output=type=registry
         push: true
         # List of tags
-        tags: ${{ secrets.LOGIN_DOCKER_HUB }}/apache_index:${{ github.ref_name }}
+        tags: ${{ secrets.LOGIN_DOCKER_HUB }}/apache_index:latest
         
         
         
