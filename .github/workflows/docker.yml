@@ -22,7 +22,7 @@ jobs:
     - name: Build and push Docker images
       uses: docker/build-push-action@v4.1.1
       with:
-        context: .
+        context: Formacao/Kubernetes_Fundamentals/CICD-kubernetes-docker/app/
         file: Formacao/Kubernetes_Fundamentals/CICD-kubernetes-docker/app/dockerfile
         # Push is a shorthand for --output=type=registry
         push: true
