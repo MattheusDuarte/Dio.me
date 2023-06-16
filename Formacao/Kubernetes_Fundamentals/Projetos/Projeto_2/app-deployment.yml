@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: 
+        image: docker push mattheuduartess/projeto2-dio:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
