@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: denilsonbonatti/kubernetes-projeto2-dio:latest
+        image: 
         imagePullPolicy: Always
         ports:
         - containerPort: 80
