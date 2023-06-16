@@ -1,0 +1,1 @@
+As práticas de CI foram utilizadas dentro do GCP, afim de prosseguir com o curso estou utilizando minha máquina local, para o Kubernetes foram rodado os comandos manualmente.
